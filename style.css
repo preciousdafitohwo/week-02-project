@@ -1,0 +1,24 @@
+
+
+h1 {text-align: center;
+font-size: 3em;}
+p {text-align: center;
+font-size: 1.5em;}
+
+#cookie {display: flex;
+justify-content: center;
+margin-bottom: 25px;}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+caption {font-size: 1.5em;}
+td {text-align: center;}
+th, td {
+    border-color: #96D4D4;
+  }
+table {width: 50vw;
+height: 25vh;}
+.table {display: flex;
+justify-content: center;
+} 

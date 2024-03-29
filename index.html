@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Click for Cookies!</title>
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click for Cookies!</title>
+    <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
-</head>
-<body>
-    
-    
-</body>
+  </head>
+  <body>
+    <h1>Welcome to Click for Cookies!</h1>
+    <p>
+      Click the cookie on screen to get 1 cookie, my cookies shows you how many
+      cookies you have so far and lastly, my cookie-upgrades shows you how many
+      cookies per second you are currently getting. If you have enough cookies,
+      buy an upgrade to increase your "my cookie-upgrades"
+    </p>
+    <div id="score">
+        <p>My Cookies: <span>0</span></p>
+        <p>My Cookie-upgrades: <span>1</span></p>
+    </div>
+    <div id="cookie">
+        <button><img src="./assets/cookie.jpg" alt="a cookie" width="200px" height="200px"></button>
+        
+    </div>
+
+    <div class="table">
+      <table>
+        <caption>UPGRADES</caption>
+        <tr>
+            <th>TYPE</th>
+            <th>COST(cookies)</th>
+            <th>COOKIES per SECOND</th>
+            <th>PURCHASE</th>
+          </tr>
+          <tr>
+            <td>Bronze</td>
+            <td>10</td>
+            <td>+2</td>
+            <td><button>Buy</button></td>
+          </tr>
+          <tr>
+            <td>Silver</td>
+            <td>50</td>
+            <td>+4</td>
+            <td><button>Buy</button></td>
+          </tr>
+          <tr>
+            <td>Gold</td>
+            <td>100</td>
+            <td>+10</td>
+            <td><button>Buy</button></td>
+          </tr>
+          <tr>
+            <td>Platinum</td>
+            <td>1000</td>
+            <td>+50</td>
+            <td><button>Buy</button></td>
+          </tr>
+      </table>
+    </div>
+  </body>
 </html>
