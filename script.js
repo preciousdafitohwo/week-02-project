@@ -18,43 +18,50 @@ const stats = {
 
 const storageStats = JSON.parse(localStorage.getItem("stats"));
 
+if (storageStats !==null){
+    stats.myCookies = storageStats.myCookies;
+    stats.bronze = storageStats.bronze;
+    stats.silver = storageStats.silver;
+    stats.gold = storageStats.gold;
+    stats.platinum = storageStats.platinum;
+    updateStats();
+}
+
 function buyCookie(){
     stats.myCookies++;
     updateStats();
     updateStorage();
 
 };
-function upBronze(){  
-    stats.myCookies = stats.myCookies - 10 ;                   //to buy the bronze upgrade
+function upBronze(){if (stats.myCookies>=10){
+    stats.myCookies = stats.myCookies - 10 ;                //to buy the bronze upgrade
     stats.bronze+=2;
     updateStats();
-    updateStorage();
+    updateStorage();}
     
     
     
 };
-function upSilver(){   
-    stats.myCookies = stats.myCookies - 50 ;                 //to buy the silver upgrade
+function upSilver(){ if (stats.myCookies>=50){
+    stats.myCookies = stats.myCookies - 50 ;               //to buy the silver upgrade
     stats.silver+=4;
     updateStats();
-    updateStorage();
+    updateStorage();}
     
     
 };
-function upGold(){   
-    stats.myCookies = stats.myCookies - 100 ;                   //to buy the gold upgrade
+function upGold(){ if (stats.myCookies>=100){ 
+    stats.myCookies = stats.myCookies - 100 ;               //to buy the gold upgrade
     stats.gold+=10;
     updateStats();
-    updateStorage();
+    updateStorage();}
 
 };
-function upPlatinum(){                                          //to buy the platinum upgrade
+function upPlatinum(){ if (stats.myCookies>=1000) {          //to buy the platinum upgrade
     stats.myCookies = stats.myCookies - 1000;
     stats.platinum+=50;
     updateStats();
-    updateStorage();
-   
-
+    updateStorage();}
 };
 
 cookieBtn.addEventListener("click", buyCookie);
@@ -62,6 +69,8 @@ buyBronzeBtn.addEventListener("click", upBronze);
 buySilverBtn.addEventListener("click", upSilver);
 buyGoldBtn.addEventListener("click", upGold);
 buyPlatinumBtn.addEventListener("click", upPlatinum);
+
+
 
 function updateStats (){
     cookieSpan.textContent = stats.myCookies;
